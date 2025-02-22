@@ -69,32 +69,16 @@ for  example
 ```sh
 find developers in enugu
 ```
-The bot will fetch leads and sync them to Pipedrive via your provided PIpedrive api
+The bot will fetch leads and sync them to Pipedrive via your provided Pipedrive api
 
-## Deploying on Render
-### 1. Create a Render Account
-Sign up at [Render](https://render.com/) and create a new web service.
-
-### 2. Connect to GitHub
-- Link your GitHub repository.
-- Select the `main` branch for deployment.
-
-### 3. Configure Environment Variables
-In Render's dashboard, add the following environment variables:
-```
-PIPEDRIVE_API_KEY=your_pipedrive_api_key
-SERP_API_KEY=your_serp_api_key
-```
-
-### 4. Set Up the Build and Start Commands
-- **Build Command:** `pip install -r requirements.txt`
-- **Start Command:** `gunicorn -w 4 -b 0.0.0.0:5000 run:app`
-
-### 5. Deploy the Application
-Click **Deploy**, and Render will build and host your application.
 
 ## Screenshots
-_Add screenshots of the integration working in Telex and Pipedrive here._
+![Telex Bot in Action](screenshots/inaction.png)
+
+![Integrations Page](screenshots/integrationspage.png)
+
+![Settings View](screenshots/settingsview.png)
+
 
 ## Contributing
 Feel free to submit issues or pull requests to improve the project.
