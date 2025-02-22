@@ -78,75 +78,6 @@ def process_message():
 
 
 
-
-@app.route('/integration-json', methods=['GET'])
-def get_integration_json1():
-    integration1_json = {
-        "data": {
-            "date": {
-            "created_at": "2025-02-21",
-            "updated_at": "2025-02-21"
-            },
-            "descriptions": {
-            "app_description": "Automates finding and pushing leads to the pipedrive crm.",
-            "app_logo": "https://images.app.goo.gl/3fgQiWc5o11DUPrL7",
-            "app_name": "Telex Lead to Pipedrive Integration",
-            "app_url": "https://2409-197-211-63-96.ngrok-free.app",
-            "background_color": "#ffffff"
-            },
-            "integration_category": "CRM & Customer Support",
-            "integration_type": "output",
-            "is_active": False,
-            "output": [
-            {
-                "label": "output_channel_1",
-                "value": True
-            },
-            {
-                "label": "output_channel_2",
-                "value": False
-            }
-            ],
-            "key_features": [
-            "Extracts needed lead datails from telex messages",
-            "Uses google dorking to find those leads on linkedin",
-            "creates a new pipedrive person",
-            "Pushes those leads to the person on pipedrive crm"
-            ],
-            "permissions": {
-            "monitoring_user": {
-                "always_online": True,
-                "display_name": "Performance Monitor"
-            }
-            },
-            "settings": [
-            {
-                    "default": "https://yourdomain.com/push-leads",
-                    "label": "target_url",
-                    "required": True,
-                    "type": "text"
-                },
-                {
-                    "default": "",
-                    "label": "pipedrive_api_key",
-                    "description": "Your Pipedrive API key to authenticate requests.",
-                    "required": True,
-                    "type": "text"
-                },
-                {
-                    "default": os.getenv("DEFAULT_SERP_API_KEY", ""),
-                    "label": "serp_api_key",
-                    "description": "Your SERP API key to enable lead search. Defaults to system key if not provided.",
-                    "required": False,
-                    "type": "text"
-                }    
-            ],
-            "tick_url": "https://2409-197-211-63-96.ngrok-free.app/process-message",
-            "target_url": "https://2409-197-211-63-96.ngrok-free.app/process-message"
-        }
-        }
-    return jsonify(integration1_json)
-        
 @app.route('/integration.json', methods=['GET'])
 def get_integration_json():
     integration_json = {
@@ -160,7 +91,7 @@ def get_integration_json():
                 "app_description": "An output integration that sends leads from Telex to Pipedrive.",
                 "app_logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdoccj7yhjCzd-prx5IcQyUZjCwIXCGpVByw&s",
                 "app_name": "Telex to Pipedrive Sync",
-                "app_url": "https://2409-197-211-63-96.ngrok-free.app",
+                "app_url": "https://lead-finder-and-pipedrive-sync.onrender.com",
                 "background_color": "#ffffff"
             },
             "integration_category": "CRM & Customer Support",
@@ -181,7 +112,7 @@ def get_integration_json():
             },
             "settings": [
                {
-                    "default": "https://2409-197-211-63-96.ngrok-free.app",
+                    "default": "https://lead-finder-and-pipedrive-sync.onrender.com",
                     "label": "target_url",
                     "required": True,
                     "type": "text"
@@ -201,9 +132,9 @@ def get_integration_json():
                     "type": "text"
                 }    
             ],
-            "target_url": "https://2409-197-211-63-96.ngrok-free.app/process-message",
-            "tick_url": "https://2409-197-211-63-96.ngrok-free.app/process-message",
-            "website": "https://2409-197-211-63-96.ngrok-free.app"
+            "target_url": "https://lead-finder-and-pipedrive-sync.onrender.com/process-message",
+            "tick_url": "https://lead-finder-and-pipedrive-sync.onrender.com/process-message",
+            "website": "https://lead-finder-and-pipedrive-sync.onrender.com"
         }
     }
     return jsonify(integration_json)
