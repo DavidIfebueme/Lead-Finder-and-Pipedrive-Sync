@@ -70,9 +70,15 @@ for  example
 ```sh
 find developers in enugu
 ```
-The integration will then fetch leads from google and sync them to Pipedrive under a newly created Person entity (named Auto Generated Person) via your provided Pipedrive api
+The integration will then fetch leads from google and sync them to Pipedrive under a newly created Person entity (named Auto Generated Person) via your provided Pipedrive api. 
 
-## Screenshots
+More information about the lead like direct linkedin profile url and more details will be added to the Notes of each lead
+
+![Leads](screenshots/leads.png)
+
+![Lead Details](screenshots/leaddetails.png)
+
+## More Screenshots
 ![Telex Bot in Action](screenshots/inaction.png)
 
 ![Integrations Page](screenshots/integrationspage.png)
