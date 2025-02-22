@@ -13,6 +13,7 @@ This project integrates lead-finding capabilities with Pipedrive, allowing users
 Before running the application, ensure you have the following installed:
 - Python 3.10+
 - Flask
+- Flask-cors
 - Requests
 - dotenv
 
@@ -56,9 +57,9 @@ The app will be available at `http://localhost:5000`.
 ## Usage
 ### Telex Integration
 
-1. First add your api keys for serp api and pipedrive in the settings section
-    a default api key is provided for you for serp api
-2. click on save "settings" 
+1. First add your api keys for serp api and pipedrive in the settings section.
+    A default api key is provided for you for serp api (but if you can, get your own abeg)
+2. click on "save settings" 
 
 3. To search for leads via Telex, enter a message in the activated channel in the following exact format:
 ```sh
@@ -69,8 +70,7 @@ for  example
 ```sh
 find developers in enugu
 ```
-The bot will fetch leads and sync them to Pipedrive via your provided Pipedrive api
-
+The integration will then fetch leads from google and sync them to Pipedrive under a newly created Person entity (named Auto Generated Person) via your provided Pipedrive api
 
 ## Screenshots
 ![Telex Bot in Action](screenshots/inaction.png)
@@ -83,7 +83,5 @@ The bot will fetch leads and sync them to Pipedrive via your provided Pipedrive 
 ## Contributing
 Feel free to submit issues or pull requests to improve the project.
 
-## License
-This project is licensed under the MIT License.
 
 
