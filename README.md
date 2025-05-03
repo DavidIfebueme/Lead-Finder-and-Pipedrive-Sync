@@ -20,7 +20,7 @@ Before running the application, ensure you have the following installed:
 ### Also ensure you have the following api keys ready
 
 - A Pipedrive API key
-- A SERP API key (for lead search)
+- A SERP API key 
 
 ## Setup
 
